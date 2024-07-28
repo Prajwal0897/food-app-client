@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
-import Navbar from '../components/Navbar';
 import Category from '../components/Category';
 import RestaurantCard from '../components/RestaurantCard';
 import { useNavigate } from 'react-router-dom';

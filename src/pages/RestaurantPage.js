@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import {useLocation } from 'react-router-dom';
 import { Box, Container, Typography, Card, CardContent, CardMedia } from '@mui/material';
 
 const RestaurantPage = () => {

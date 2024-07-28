@@ -26,7 +26,8 @@
     "deploy": "vercel --prod"
   },
   "devDependencies": {
-    "vercel": "^24.2.0" 
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "vercel": "^24.2.0"
   },
   "eslintConfig": {
     "extends": [
