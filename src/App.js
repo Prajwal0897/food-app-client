@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import RestaurantPage from './pages/RestaurantPage';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import SearchPage from './pages/SearchPage';
+import OrdersPage from './pages/OrdersPage';
+import ProfilePage from './pages/ProfilePage';
+import Layout from './components/Layout';
 
-function App() {
+const App = () => {
+  const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route
+          path="/main"
+          element={
+            <Layout>
+              <MainPage setSelectedRestaurant={setSelectedRestaurant} />
+            </Layout>
+          }
+        />
+        <Route
+          path="/restaurant/:id"
+          element={
+            <Layout>
+              <RestaurantPage restaurants={selectedRestaurant ? [selectedRestaurant] : []} />
+            </Layout>
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <Layout>
+              <SearchPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <Layout>
+              <OrdersPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <Layout>
+              <ProfilePage />
+            </Layout>
+          }
+        />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

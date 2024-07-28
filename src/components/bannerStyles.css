@@ -1,0 +1,47 @@
+/* bannerStyles.css */
+.banner {
+    background: linear-gradient(90deg, rgba(135,182,255,1) 0%, rgba(255,137,217,1) 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    margin: 0;
+    animation: slideIn 2s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    animation: spin 4s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
