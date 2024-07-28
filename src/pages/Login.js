@@ -32,7 +32,7 @@ const Login = () => {
         }}
       >
         <Typography component="h1" variant="h5" sx={{ mb: 2 }}>
-          Log in to Aspen
+          Log in to DesiDelights
         </Typography>
         <Box sx={{ mt: 1, width: '100%' }}>
           <Button

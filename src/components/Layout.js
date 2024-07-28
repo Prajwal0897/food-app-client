@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <Container maxWidth="xl">
         <div className="banner">
-        <h1>Foodie Haven</h1>
+        <h1>Desi Delights</h1>
       </div>
       <Navbar />
       

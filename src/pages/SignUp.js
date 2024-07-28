@@ -29,7 +29,7 @@ const SignUp = () => {
         }}
       >
         <Typography component="h1" variant="h5" sx={{ mb: 2 }}>
-          Sign up to Aspen
+          Sign up to DesiDelights
         </Typography>
         <Box component="form" onSubmit={handleSignUp} sx={{ mt: 1, width: '100%' }}>
           <TextField
